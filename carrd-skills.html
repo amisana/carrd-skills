@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amisana Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        h2, h3 {
+            cursor: pointer;
+        }
+        .content {
+            max-width: 600px;
+            margin: auto;
+        }
+        .collapsible {
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+        }
+        .collapsible:after {
+            content: '\002B';
+            font-size: 13px;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2212";
+        }
+        .content-section {
+            padding: 0 15px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-left: 3px solid #ccc;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section-heading {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>cameron kiani, md.</h1>
+        <button class="collapsible">Education</button>
+        <div class="content-section">
+            <ul>
+                <li>BA Psychology, UPenn (ΦBK)</li>
+                <li>MD, Mount Sinai</li>
+                <li>MPH Candidate, Mount Sinai</li>
+            </ul>
+        </div>
+
+        <button class="collapsible">Experience</button>
+        <div class="content-section">
+            <ul>
+                <li>OEM Resident, ISMMS ‘25</li>
+                <li>Founder, Amisana Solutions</li>
+                <li>Beaconhouse Capital Management, Strategy & AI Consulting</li>
+                <li>AI Co-Lead, ACOEM</li>
+            </ul>
+        </div>
+
+        <button class="collapsible">Skills</button>
+        <div class="content-section">
+            <ul>
+                <li>Occupational Medicine</li>
+                <li>Environmental Health</li>
+                <li>Artificial Intelligence</li>
+                <li>Content Generation</li>
+                <li>Research</li>
+                <li>Professional/Academic Writing</li>
+                <li>Non-Academic Writing</li>
+            </ul>
+        </div>
+
+        <h2 class="section-heading">software</h2>
+        <button class="collapsible">OS</button>
+        <div class="content-section">
+            <p>Mac, Windows, iOS, Android</p>
+        </div>
+
+        <button class="collapsible">Apps</button>
+        <div class="content-section">
+            <ul>
+                <li>iPhone & Android Apps: Automation, File Management, AI Tools, etc.</li>
+                <li>Mac & Windows Apps: Automation, Advanced Search, Cloud Storage, etc.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-heading">services</h2>
+        <button class="collapsible">List of Offerings</button>
+        <div class="content-section">
+            <ul>
+                <li>Personalized Learning Plans and Content (Text, Audio, Video)</li>
+                <li>Workshops and Live Sessions on AI</li>
+                <li>Customized AI implementation solutions</li>
+            </ul>
+        </div>
+
+        <h2 class="section-heading">ai</h2>
+        <button class="collapsible">Models</button>
+        <div class="content-section">
+            <ul>
+                <li>OpenAI: ChatGPT, GPT-V, WhisperAI, DALL-E</li>
+                <li>Google: Bard, DeepMind models</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
